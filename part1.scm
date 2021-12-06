@@ -1,0 +1,27 @@
+(define(abval nums) ;abval is the method name and nums is a list 
+   ( if(null? nums) ; if the list is empty return an empty list
+     '()
+     (cons(abs(car nums)) ;finds the absolute value of the first number in the list
+                   (abval(cdr nums)))));finds the absolute value of all of the numbers except for the first one
+(display(abval '(11 -24 12 14 -14 -17 913 -381 -83 -3721)))
+(newline)
+(display(abval '(17 -61 19 -219 -1238 132 -128 -1991 1919)))
+(newline)
+(display(abval '(181 -181292 19239 -191239 -12311 231921 -12312)))
+(newline)
+(display(abval '(0983 -2131  123123 -1 31 321 -13 211 -213)))
+(newline)
+(display(abval '(8678 -86 868  -6 76 -45 3 -64 3)))
+(newline)
+(display(abval '(35 -54 2 7 -245 7453 -332 7472 -6264)))
+(newline)
+(display(abval '( 34632  -634253 6246 -2334 5345 -34 346 )))
+(newline)
+(display(abval '( 26 -34 3 -5 3 -53 43 -4 -57 )))
+(newline)
+(display(abval '(6 -46 3 -5 8 0 -6 5 -4 677)))
+(newline)
+(display(abval '(92 -42 346 -7 67 -8 6 -54 74 -47 )))
+(newline)
+(display(abval '( -42  6  -3 4  -23 3 -2575  -34 2 -32 23 5 -56543 2112)))
+(newline)
